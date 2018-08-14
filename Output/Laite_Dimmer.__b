@@ -1,0 +1,9 @@
+TRANSFER
+"..\Output\main.obj",
+"..\Output\led.obj",
+"..\Output\key.obj",
+"..\Output\pwm.obj",
+"..\Output\rs485.obj",
+"..\Output\crc8.obj",
+"..\Output\eeprom.obj" 
+TO "..\Output\Laite_Dimmer.LIB"
