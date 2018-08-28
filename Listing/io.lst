@@ -1,0 +1,226 @@
+C51 COMPILER V9.00   IO                                                                    08/27/2018 17:05:12 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE IO
+OBJECT MODULE PLACED IN ..\Output\io.obj
+COMPILER INVOKED BY: D:\Keil_v514\C51\BIN\C51.EXE ..\User\io.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(..\List
+                    -ing\io.lst) TABS(2) OBJECT(..\Output\io.obj)
+
+line level    source
+
+   1          #include "io.h"
+   2          #include "relay.h"
+   3          #include "delay.h"
+   4          #include "rs485.h"
+   5          #include <string.h>
+   6          
+   7          
+   8          uint8_t IO_Enable_Buffer[8] = {0};
+   9          uint8_t IO_Input_Buffer[8] = {0};
+  10          uint8_t IO_State_Buffer[2] = {0};
+  11          uint8_t IO_Input_Lock[8] = {0};
+  12          uint8_t Device_State = Offline;
+  13          uint8_t RS485_Addr = 0;
+  14          uint8_t Cnt1 = 0;
+  15          
+  16          void IO_RS485_Addr_Scan(void)
+  17          { 
+  18   1        for(Cnt1 = 0;Cnt1 < 6;Cnt1++)
+  19   1        {
+  20   2          if(IO_Input_Check(Addr_IO,Cnt1))
+  21   2          {
+  22   3            RS485_Addr |=(0x01<<Cnt1);        
+  23   3          }
+  24   2          else
+  25   2          {
+  26   3            RS485_Addr &=~(0x01<<Cnt1);     
+  27   3          }       
+  28   2        }
+  29   1      }
+  30                             
+  31          void IO_Enable_Scan(void)
+  32          {
+  33   1        for(Cnt1 = 0;Cnt1 < 8;Cnt1++)
+  34   1        {
+  35   2          IO_Enable_Buffer[Cnt1] = IO_Input_Check(Enable_IO,Cnt1);    
+  36   2        }
+  37   1      }
+  38                              
+  39          
+  40          void IO_Input_Scan(void)
+  41          { 
+  42   1        uint8_t Temp1 = 0,Temp2 = 0;
+  43   1        
+  44   1        for(Cnt1 = 0;Cnt1 < 8;Cnt1++)
+  45   1        {
+  46   2          Temp1 = IO_Input_Check(Input_IO,Cnt1);
+  47   2          Timer1_Delay10ms(2);
+  48   2          Temp2 = IO_Input_Check(Input_IO,Cnt1);
+  49   2          
+  50   2          if(Temp1 == Temp2)
+  51   2          {
+  52   3            if(Device_State == Offline)
+  53   3            {
+  54   4               if(IO_Input_Buffer[Cnt1] != Temp2)
+C51 COMPILER V9.00   IO                                                                    08/27/2018 17:05:12 PAGE 2   
+
+  55   4               {
+  56   5                 if(IO_Enable_Buffer[Cnt1])
+  57   5                 {
+  58   6                   IO_Control_Relay(Cnt1);
+  59   6                   Timer1_Delay10ms(20);               //此处的延时参数和按键翻转的频率有关 
+  60   6                 }                             
+  61   5               }
+  62   4              IO_Input_Buffer[Cnt1] = IO_Input_Check(Input_IO,Cnt1);                     
+  63   4            }
+  64   3            else
+  65   3            {
+  66   4              if((IO_Input_Buffer[Cnt1] != Temp1) && (!IO_Input_Lock[Cnt1]))
+  67   4              {
+  68   5                 IO_Input_Lock[Cnt1] = 1;
+  69   5                 IO_Input_Buffer[Cnt1] = Temp2;
+  70   5              }
+  71   4            }   
+  72   3          } 
+  73   2        } 
+  74   1      }
+  75          
+  76          
+  77          
+  78          void IO_State_Convert(void)
+  79          {
+  80   1        IO_State_Buffer[0] |=((IO_Enable_Buffer[0]==0x01?0x01:0x00)<<1
+  81   1                             |(IO_Enable_Buffer[1]==0x01?0x01:0x00)<<3
+  82   1                             |(IO_Enable_Buffer[2]==0x01?0x01:0x00)<<5
+  83   1                             |(IO_Enable_Buffer[3]==0x01?0x01:0x00)<<7);
+  84   1        
+  85   1        
+  86   1        
+  87   1        IO_State_Buffer[1] |=((IO_Enable_Buffer[4]==0x01?0x01:0x00)<<1
+  88   1                             |(IO_Enable_Buffer[5]==0x01?0x01:0x00)<<3              
+  89   1                             |(IO_Enable_Buffer[6]==0x01?0x01:0x00)<<5
+  90   1                             |(IO_Enable_Buffer[7]==0x01?0x01:0x00)<<7);
+  91   1        
+  92   1        IO_State_Buffer[0] |=((IO_Input_Buffer[0]==0x01?0x01:0x00)
+  93   1                             |(IO_Input_Buffer[1]==0x01?0x01:0x00)<<2
+  94   1                             |(IO_Input_Buffer[2]==0x01?0x01:0x00)<<4
+  95   1                             |(IO_Input_Buffer[3]==0x01?0x01:0x00)<<6);
+  96   1                
+  97   1        IO_State_Buffer[1] |=((IO_Input_Buffer[4]==0x01?0x01:0x00)
+  98   1                             |(IO_Input_Buffer[5]==0x01?0x01:0x00)<<2
+  99   1                             |(IO_Input_Buffer[6]==0x01?0x01:0x00)<<4
+ 100   1                             |(IO_Input_Buffer[7]==0x01?0x01:0x00)<<6); 
+ 101   1      }
+ 102          
+ 103          
+ 104          uint8_t IO_Input_Check(uint8_t Scan_type,uint8_t Scan_Num)
+ 105          {
+ 106   1        uint8_t temp = 0;
+ 107   1      
+ 108   1        switch(Scan_type)
+ 109   1        {
+ 110   2          case Input_IO:
+ 111   2            switch(Scan_Num+1)
+ 112   2            {
+ 113   3              case 0x01:
+ 114   3                temp = IO1;
+ 115   3                break;
+ 116   3              case 0x02:
+C51 COMPILER V9.00   IO                                                                    08/27/2018 17:05:12 PAGE 3   
+
+ 117   3                temp = IO2;         
+ 118   3                break;
+ 119   3              case 0x03:
+ 120   3                temp = IO3;
+ 121   3                break;
+ 122   3              case 0x04:
+ 123   3                temp = IO4;
+ 124   3                break;
+ 125   3              case 0x05:
+ 126   3                temp = IO5;
+ 127   3                break;
+ 128   3              case 0x06:
+ 129   3                temp = IO6;
+ 130   3                break;
+ 131   3              case 0x07:
+ 132   3                temp = IO7;
+ 133   3                break;
+ 134   3              case 0x08:
+ 135   3                temp = IO8;
+ 136   3                break;        
+ 137   3            }
+ 138   2            break;
+ 139   2          case Enable_IO:
+ 140   2            switch(Scan_Num+1)
+ 141   2            {
+ 142   3              case 0x01:
+ 143   3                temp = IO1_En;
+ 144   3                break;
+ 145   3              case 0x02:
+ 146   3                temp = IO2_En;          
+ 147   3                break;
+ 148   3              case 0x03:
+ 149   3                temp = IO3_En;
+ 150   3                break;
+ 151   3              case 0x04:
+ 152   3                temp = IO4_En;
+ 153   3                break;
+ 154   3              case 0x05:
+ 155   3                temp = IO5_En;
+ 156   3                break;
+ 157   3              case 0x06:
+ 158   3                temp = IO6_En;
+ 159   3                break;
+ 160   3              case 0x07:
+ 161   3                temp = IO7_En;
+ 162   3                break;
+ 163   3              case 0x08:
+ 164   3                temp = IO8_En;
+ 165   3                break;        
+ 166   3            }
+ 167   2            break;      
+ 168   2          case Addr_IO:
+ 169   2            switch(Scan_Num+1)        
+ 170   2            {
+ 171   3              case 0x01:
+ 172   3                temp = Addr1;
+ 173   3                break;
+ 174   3              case 0x02:
+ 175   3                temp = Addr2;         
+ 176   3                break;
+ 177   3              case 0x03:
+ 178   3                temp = Addr3;
+C51 COMPILER V9.00   IO                                                                    08/27/2018 17:05:12 PAGE 4   
+
+ 179   3                break;
+ 180   3              case 0x04:
+ 181   3                temp = Addr4;
+ 182   3                break;
+ 183   3              case 0x05:
+ 184   3                temp = Addr5;
+ 185   3                break;
+ 186   3              case 0x06:
+ 187   3                temp = Addr6;
+ 188   3                break;            
+ 189   3            }
+ 190   2            break;
+ 191   2          
+ 192   2        }
+ 193   1        temp = (temp == 0x01?0x00:0x01);
+ 194   1        return temp;
+ 195   1      }
+ 196          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    725    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     29       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
