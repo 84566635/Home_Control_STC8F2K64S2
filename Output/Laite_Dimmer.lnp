@@ -1,9 +1,0 @@
-"..\Output\main.obj",
-"..\Output\io.obj",
-"..\Output\relay.obj",
-"..\Output\rs485.obj",
-"..\Output\crc8.obj",
-"..\Output\delay.obj",
-"..\Output\watchdog.obj" 
-TO "..\Output\Laite_Dimmer" 
-PRINT("..\Listing\Laite_Dimmer.m51") RAMSIZE(256) 
