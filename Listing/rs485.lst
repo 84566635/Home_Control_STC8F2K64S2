@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   RS485                                                                 08/27/2018 17:05:12 PAGE 1   
+C51 COMPILER V9.00   RS485                                                                 10/15/2018 14:10:31 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE RS485
@@ -26,9 +26,9 @@ line level    source
   16          ******************************************************************************/
   17          void RS485_Init(void)
   18          { 
-  19   1      //   AUXR1 &= 0X3F;    // #00xx xxxx [S1_S1:S1_S0] = [0:0],将串口1的TXD RXD引脚切换至P3.1 P3.0
+  19   1         AUXR1 &= 0X3F;    // #00xx xxxx [S1_S1:S1_S0] = [0:0],将串口1的TXD RXD引脚切换至P3.1 P3.0
   20   1        
-  21   1        AUXR1 = 0x40;
+  21   1         AUXR1 = 0x40;
   22   1      
   23   1         SCON = 0x50;      // #0101 0000 [SM0:SM1]=[0:0],串口1工作在模式1--10位串口通信，即1位起始位+8位数据位+1
              -位停止位，无校验位
@@ -62,7 +62,7 @@ line level    source
   51   2          Rx_Buffer[Rx_Cnt++]=SBUF;                     //读取缓冲区的数据
   52   2          
   53   2          if(Rx_Buffer[0] == 0xad)
-C51 COMPILER V9.00   RS485                                                                 08/27/2018 17:05:12 PAGE 2   
+C51 COMPILER V9.00   RS485                                                                 10/15/2018 14:10:31 PAGE 2   
 
   54   2          {
   55   3            if(Rx_Buffer[1] == 0xda)
@@ -126,7 +126,7 @@ line level    source
  113   1        
  114   1        /*开始根据RS485传输的指令进行比对和处理*/  
  115   1        if(Analy_Buffer[3] == RS485_Addr)
-C51 COMPILER V9.00   RS485                                                                 08/27/2018 17:05:12 PAGE 3   
+C51 COMPILER V9.00   RS485                                                                 10/15/2018 14:10:31 PAGE 3   
 
  116   1        {             
  117   2          switch(Analy_Buffer[4])
@@ -190,7 +190,7 @@ line level    source
  175   1        
  176   1        Send_Temp[7]=CRC8_Check(7,CRC_Temp);
  177   1      
-C51 COMPILER V9.00   RS485                                                                 08/27/2018 17:05:12 PAGE 4   
+C51 COMPILER V9.00   RS485                                                                 10/15/2018 14:10:31 PAGE 4   
 
  178   1        Send_data(Send_Temp,8);
  179   1      }
@@ -254,7 +254,7 @@ line level    source
  237          ******************************************************************************/
  238          void Response_IO_Relay_State(uint8_t cmd)
  239          {
-C51 COMPILER V9.00   RS485                                                                 08/27/2018 17:05:12 PAGE 5   
+C51 COMPILER V9.00   RS485                                                                 10/15/2018 14:10:31 PAGE 5   
 
  240   1        uint8_t Send_Temp[15]={0};
  241   1        uint8_t CRC_Temp[10]={0};
@@ -297,7 +297,7 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    783    ----
+   CODE SIZE        =    786    ----
    CONSTANT SIZE    =     75    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

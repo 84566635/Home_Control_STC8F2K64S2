@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        08/27/2018  17:05:13  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/15/2018  14:10:32  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
             CODE    0657H     006FH     UNIT         ?PR?_RESPONSE_RS485_ADRRESS?RS485
             CODE    06C6H     0067H     UNIT         ?PR?_RESPONSE_CMD_CONTROL_MSG?RS485
             CODE    072DH     005BH     UNIT         ?PR?_RELAY_CONTROL?RELAY
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 2
 
 
             CODE    0788H     0052H     UNIT         ?PR?_CMD_CONTROL_RELAY?RELAY
@@ -70,15 +70,15 @@ LINK MAP OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
             CODE    08FBH     0038H     UNIT         ?PR?IO_RS485_ADDR_SCAN?IO
             CODE    0933H     0026H     UNIT         ?PR?_SEND_DATA?RS485
             CODE    0959H     0025H     UNIT         ?PR?_UART_CMD_CONTROL_RELAY?RS485
-            CODE    097EH     001BH     UNIT         ?PR?IO_ENABLE_SCAN?IO
-            CODE    0999H     001AH     UNIT         ?PR?MAIN?MAIN
-            CODE    09B3H     001AH     UNIT         ?PR?RS485_INIT?RS485
-            CODE    09CDH     0016H     UNIT         ?PR?TM1_ISR?DELAY
-            CODE    09E3H     0015H     UNIT         ?PR?TIMER1_INIT?DELAY
-            CODE    09F8H     0014H     UNIT         ?PR?RELAY_INIT?RELAY
-            CODE    0A0CH     000CH     UNIT         ?PR?_IO_CONTROL_RELAY?RELAY
-            CODE    0A18H     000BH     UNIT         ?PR?_TIMER1_DELAY10MS?DELAY
-            CODE    0A23H     0004H     UNIT         ?PR?WATCHDOG_FEED?WATCHDOG
+            CODE    097EH     001DH     UNIT         ?PR?RS485_INIT?RS485
+            CODE    099BH     001BH     UNIT         ?PR?IO_ENABLE_SCAN?IO
+            CODE    09B6H     001AH     UNIT         ?PR?MAIN?MAIN
+            CODE    09D0H     0016H     UNIT         ?PR?TM1_ISR?DELAY
+            CODE    09E6H     0015H     UNIT         ?PR?TIMER1_INIT?DELAY
+            CODE    09FBH     0014H     UNIT         ?PR?RELAY_INIT?RELAY
+            CODE    0A0FH     000CH     UNIT         ?PR?_IO_CONTROL_RELAY?RELAY
+            CODE    0A1BH     000BH     UNIT         ?PR?_TIMER1_DELAY10MS?DELAY
+            CODE    0A26H     0004H     UNIT         ?PR?WATCHDOG_FEED?WATCHDOG
 
 
 
@@ -119,7 +119,7 @@ SEGMENT                                       DATA_GROUP
   +--> ?CO?RS485
   +--> ?PR?_CRC8_CHECK?CRC8
   +--> ?PR?_SEND_DATA?RS485
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 3
 
 
 
@@ -179,31 +179,31 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 4
 
 
   D:00C8H         PUBLIC        P5
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:0999H         PUBLIC        main
+  C:09B6H         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  C:0999H         LINE#         9
-  C:0999H         LINE#         10
-  C:0999H         LINE#         11
-  C:099CH         LINE#         12
-  C:099FH         LINE#         13
-  C:09A2H         LINE#         14
-  C:09A5H         LINE#         15
-  C:09A5H         LINE#         16
-  C:09A5H         LINE#         17
-  C:09A8H         LINE#         18
-  C:09ABH         LINE#         19
-  C:09AEH         LINE#         20
-  C:09B1H         LINE#         21
+  C:09B6H         LINE#         9
+  C:09B6H         LINE#         10
+  C:09B6H         LINE#         11
+  C:09B9H         LINE#         12
+  C:09BCH         LINE#         13
+  C:09BFH         LINE#         14
+  C:09C2H         LINE#         15
+  C:09C2H         LINE#         16
+  C:09C2H         LINE#         17
+  C:09C5H         LINE#         18
+  C:09C8H         LINE#         19
+  C:09CBH         LINE#         20
+  C:09CEH         LINE#         21
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
@@ -220,10 +220,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0037H         PUBLIC        RS485_Addr
-  C:097EH         PUBLIC        IO_Enable_Scan
+  C:099BH         PUBLIC        IO_Enable_Scan
   B:00C8H.5       PUBLIC        Addr1
-  B:0090H.7       PUBLIC        Addr2
-  B:0090H.5       PUBLIC        Addr3
+  B:00C8H.4       PUBLIC        Addr2
+  B:0090H.6       PUBLIC        Addr3
   B:0090H.4       PUBLIC        Addr4
   B:0090H.2       PUBLIC        Addr5
   B:0090H.0       PUBLIC        Addr6
@@ -232,28 +232,28 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0038H         PUBLIC        Device_State
   D:0039H         PUBLIC        IO_State_Buffer
   C:0175H         PUBLIC        IO_State_Convert
-  B:00C8H.4       PUBLIC        IO1
+  B:0090H.7       PUBLIC        IO1
   D:003BH         PUBLIC        IO_Input_Buffer
-  B:0090H.6       PUBLIC        IO2
+  B:0090H.5       PUBLIC        IO2
   B:0090H.3       PUBLIC        IO3
   B:0090H.1       PUBLIC        IO4
   C:0294H         PUBLIC        _IO_Input_Check
-  B:00B0H.2       PUBLIC        IO5
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 5
+  B:0080H.0       PUBLIC        IO5
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 5
 
 
-  B:00B0H.4       PUBLIC        IO6
-  B:00A0H.4       PUBLIC        IO7
+  B:0080H.1       PUBLIC        IO6
+  B:0080H.2       PUBLIC        IO7
   B:0080H.3       PUBLIC        IO8
   D:0043H         PUBLIC        Cnt1
-  B:0080H.2       PUBLIC        IO1_En
-  B:0080H.0       PUBLIC        IO2_En
-  B:00A0H.7       PUBLIC        IO3_En
-  B:0080H.1       PUBLIC        IO4_En
-  B:00A0H.6       PUBLIC        IO5_En
-  B:00A0H.5       PUBLIC        IO6_En
-  B:00B0H.5       PUBLIC        IO7_En
-  B:00B0H.3       PUBLIC        IO8_En
+  B:00A0H.7       PUBLIC        IO1_En
+  B:00A0H.6       PUBLIC        IO2_En
+  B:00A0H.5       PUBLIC        IO3_En
+  B:00A0H.4       PUBLIC        IO4_En
+  B:00A0H.3       PUBLIC        IO5_En
+  B:00A0H.2       PUBLIC        IO6_En
+  B:00A0H.1       PUBLIC        IO7_En
+  B:00A0H.0       PUBLIC        IO8_En
   C:05E6H         PUBLIC        IO_Input_Scan
   D:0044H         PUBLIC        IO_Input_Lock
   D:00D0H         PUBLIC        PSW
@@ -273,13 +273,13 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0932H         LINE#         29
   -------         ENDPROC       IO_RS485_ADDR_SCAN
   -------         PROC          IO_ENABLE_SCAN
-  C:097EH         LINE#         31
-  C:097EH         LINE#         32
-  C:097EH         LINE#         33
-  C:0981H         LINE#         34
-  C:0981H         LINE#         35
-  C:098FH         LINE#         36
-  C:0998H         LINE#         37
+  C:099BH         LINE#         31
+  C:099BH         LINE#         32
+  C:099BH         LINE#         33
+  C:099EH         LINE#         34
+  C:099EH         LINE#         35
+  C:09ACH         LINE#         36
+  C:09B5H         LINE#         37
   -------         ENDPROC       IO_ENABLE_SCAN
   -------         PROC          IO_INPUT_SCAN
   -------         DO            
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0604H         LINE#         52
   C:0608H         LINE#         53
   C:0608H         LINE#         54
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 6
 
 
   C:0612H         LINE#         55
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:02E3H         LINE#         120
   C:02E5H         LINE#         121
   C:02E8H         LINE#         122
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 7
 
 
   C:02E8H         LINE#         123
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:036BH         LINE#         177
   C:036BH         LINE#         178
   C:036DH         LINE#         179
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 8
 
 
   C:036FH         LINE#         180
@@ -450,36 +450,36 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  B:00A0H.1       PUBLIC        Relay1
-  B:00A0H.0       PUBLIC        Relay2
+  B:00B0H.4       PUBLIC        Relay1
+  B:00B0H.5       PUBLIC        Relay2
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0871H         PUBLIC        Relay_State_Conver
   C:0788H         PUBLIC        _Cmd_Control_Relay
-  C:0A0CH         PUBLIC        _IO_Control_Relay
+  C:0A0FH         PUBLIC        _IO_Control_Relay
   C:072DH         PUBLIC        _Relay_Control
   D:0057H         PUBLIC        Relay_State
-  C:09F8H         PUBLIC        Relay_Init
+  C:09FBH         PUBLIC        Relay_Init
   D:0058H         PUBLIC        Relay_Temp
   D:00D0H         PUBLIC        PSW
   -------         PROC          RELAY_INIT
   -------         DO            
   D:002DH         SYMBOL        Cnt
   -------         ENDDO         
-  C:09F8H         LINE#         8
-  C:09F8H         LINE#         9
-  C:09F8H         LINE#         11
-  C:09FBH         LINE#         12
-  C:09FBH         LINE#         13
-  C:0A02H         LINE#         14
-  C:0A0BH         LINE#         15
+  C:09FBH         LINE#         8
+  C:09FBH         LINE#         9
+  C:09FBH         LINE#         11
+  C:09FEH         LINE#         12
+  C:09FEH         LINE#         13
+  C:0A05H         LINE#         14
+  C:0A0EH         LINE#         15
   -------         ENDPROC       RELAY_INIT
   -------         PROC          _RELAY_CONTROL
   D:0007H         SYMBOL        Num
   D:0005H         SYMBOL        Set
   C:072DH         LINE#         18
   C:072DH         LINE#         19
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 9
 
 
   C:072DH         LINE#         20
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0787H         LINE#         78
   C:0787H         LINE#         79
   C:0787H         LINE#         80
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 10
 
 
   C:0787H         LINE#         81
@@ -597,16 +597,16 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   -------         ENDPROC       _CMD_CONTROL_RELAY
   -------         PROC          _IO_CONTROL_RELAY
   D:0007H         SYMBOL        Num
-  C:0A0CH         LINE#         139
-  C:0A0CH         LINE#         140
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 11
+  C:0A0FH         LINE#         139
+  C:0A0FH         LINE#         140
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 11
 
 
-  C:0A0CH         LINE#         141
-  C:0A12H         LINE#         142
-  C:0A12H         LINE#         143
-  C:0A17H         LINE#         144
-  C:0A17H         LINE#         145
+  C:0A0FH         LINE#         141
+  C:0A15H         LINE#         142
+  C:0A15H         LINE#         143
+  C:0A1AH         LINE#         144
+  C:0A1AH         LINE#         145
   -------         ENDPROC       _IO_CONTROL_RELAY
   -------         PROC          RELAY_STATE_CONVER
   C:0871H         LINE#         147
@@ -638,7 +638,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0657H         PUBLIC        _Response_RS485_Adrress
-  C:09B3H         PUBLIC        RS485_Init
+  C:097EH         PUBLIC        RS485_Init
   D:008EH         PUBLIC        AUXR
   C:0826H         SYMBOL        _?ix1000
   C:0835H         SYMBOL        _?ix1001
@@ -655,21 +655,22 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00A2H         PUBLIC        AUXR1
   D:00D0H         PUBLIC        PSW
   -------         PROC          RS485_INIT
-  C:09B3H         LINE#         17
-  C:09B3H         LINE#         18
-  C:09B3H         LINE#         21
-  C:09B6H         LINE#         23
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 12
+  C:097EH         LINE#         17
+  C:097EH         LINE#         18
+  C:097EH         LINE#         19
+  C:0981H         LINE#         21
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 12
 
 
-  C:09B9H         LINE#         25
-  C:09BCH         LINE#         28
-  C:09BFH         LINE#         30
-  C:09C2H         LINE#         31
-  C:09C5H         LINE#         33
-  C:09C8H         LINE#         35
-  C:09CAH         LINE#         37
-  C:09CCH         LINE#         38
+  C:0984H         LINE#         23
+  C:0987H         LINE#         25
+  C:098AH         LINE#         28
+  C:098DH         LINE#         30
+  C:0990H         LINE#         31
+  C:0993H         LINE#         33
+  C:0996H         LINE#         35
+  C:0998H         LINE#         37
+  C:099AH         LINE#         38
   -------         ENDPROC       RS485_INIT
   -------         PROC          UART1
   C:0386H         LINE#         45
@@ -718,10 +719,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0940H         LINE#         95
   C:0940H         LINE#         96
   C:0950H         LINE#         97
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 13
+
+
   C:0953H         LINE#         98
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 13
-
-
   C:0955H         LINE#         99
   C:0958H         LINE#         100
   -------         ENDPROC       _SEND_DATA
@@ -778,10 +779,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0699H         LINE#         165
   C:069CH         LINE#         166
   C:069FH         LINE#         168
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 14
+
+
   C:06A2H         LINE#         169
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 14
-
-
   C:06A5H         LINE#         171
   C:06A8H         LINE#         172
   C:06ABH         LINE#         174
@@ -838,10 +839,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0595H         LINE#         242
   C:0598H         LINE#         243
   C:059BH         LINE#         245
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 15
+
+
   C:059EH         LINE#         246
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 15
-
-
   C:05A1H         LINE#         248
   C:05A4H         LINE#         249
   C:05A7H         LINE#         251
@@ -898,10 +899,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:08E3H         LINE#         20
   C:08E3H         LINE#         21
   C:08E6H         LINE#         22
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 16
+
+
   C:08EAH         LINE#         23
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 16
-
-
   C:08EDH         LINE#         24
   C:08EDH         LINE#         25
   C:08F1H         LINE#         26
@@ -923,33 +924,33 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:09E3H         PUBLIC        Timer1_Init
+  C:09E6H         PUBLIC        Timer1_Init
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
   D:008EH         PUBLIC        AUXR
   B:00A8H.3       PUBLIC        ET1
-  C:0A18H         PUBLIC        _Timer1_Delay10ms
+  C:0A1BH         PUBLIC        _Timer1_Delay10ms
   B:0088H.7       PUBLIC        TF1
   D:008DH         PUBLIC        TH1
   D:008BH         PUBLIC        TL1
   B:0088H.6       PUBLIC        TR1
   D:005EH         PUBLIC        Timing_Count
   C:0003H         PUBLIC        Device_State_Jugement
-  C:09CDH         PUBLIC        TM1_Isr
+  C:09D0H         PUBLIC        TM1_Isr
   D:00D0H         PUBLIC        PSW
   -------         PROC          TIMER1_INIT
-  C:09E3H         LINE#         8
-  C:09E3H         LINE#         9
-  C:09E3H         LINE#         10
-  C:09E6H         LINE#         11
-  C:09E9H         LINE#         12
-  C:09ECH         LINE#         13
-  C:09EFH         LINE#         15
-  C:09F1H         LINE#         16
-  C:09F3H         LINE#         17
-  C:09F5H         LINE#         18
-  C:09F7H         LINE#         19
+  C:09E6H         LINE#         8
+  C:09E6H         LINE#         9
+  C:09E6H         LINE#         10
+  C:09E9H         LINE#         11
+  C:09ECH         LINE#         12
+  C:09EFH         LINE#         13
+  C:09F2H         LINE#         15
+  C:09F4H         LINE#         16
+  C:09F6H         LINE#         17
+  C:09F8H         LINE#         18
+  C:09FAH         LINE#         19
   -------         ENDPROC       TIMER1_INIT
   -------         PROC          DEVICE_STATE_JUGEMENT
   C:0003H         LINE#         21
@@ -958,10 +959,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0009H         LINE#         24
   C:0009H         LINE#         25
   C:000CH         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 17
+
+
   C:0014H         LINE#         27
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 17
-
-
   C:0015H         LINE#         29
   C:0015H         LINE#         30
   C:0018H         LINE#         31
@@ -969,20 +970,20 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   -------         ENDPROC       DEVICE_STATE_JUGEMENT
   -------         PROC          _TIMER1_DELAY10MS
   D:0006H         SYMBOL        Delay_ms
-  C:0A18H         LINE#         35
-  C:0A18H         LINE#         36
-  C:0A18H         LINE#         37
-  C:0A1CH         LINE#         38
-  C:0A22H         LINE#         39
+  C:0A1BH         LINE#         35
+  C:0A1BH         LINE#         36
+  C:0A1BH         LINE#         37
+  C:0A1FH         LINE#         38
+  C:0A25H         LINE#         39
   -------         ENDPROC       _TIMER1_DELAY10MS
   -------         PROC          TM1_ISR
-  C:09CDH         LINE#         42
-  C:09CFH         LINE#         44
-  C:09D2H         LINE#         45
-  C:09D8H         LINE#         46
-  C:09D8H         LINE#         47
-  C:09E0H         LINE#         48
-  C:09E0H         LINE#         49
+  C:09D0H         LINE#         42
+  C:09D2H         LINE#         44
+  C:09D5H         LINE#         45
+  C:09DBH         LINE#         46
+  C:09DBH         LINE#         47
+  C:09E3H         LINE#         48
+  C:09E3H         LINE#         49
   -------         ENDPROC       TM1_ISR
   -------         ENDMOD        DELAY
 
@@ -1000,7 +1001,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00C1H         PUBLIC        WDT_CONTR
-  C:0A23H         PUBLIC        WatchDog_Feed
+  C:0A26H         PUBLIC        WatchDog_Feed
   D:00D0H         PUBLIC        PSW
   -------         PROC          WATCHDOG_INIT
   C:001EH         LINE#         4
@@ -1009,19 +1010,19 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0021H         LINE#         12
   -------         ENDPROC       WATCHDOG_INIT
   -------         PROC          WATCHDOG_FEED
-  C:0A23H         LINE#         14
-  C:0A23H         LINE#         15
-  C:0A23H         LINE#         16
-  C:0A26H         LINE#         17
+  C:0A26H         LINE#         14
+  C:0A26H         LINE#         15
+  C:0A26H         LINE#         16
+  C:0A29H         LINE#         17
   -------         ENDPROC       WATCHDOG_FEED
   -------         ENDMOD        WATCHDOG
 
   -------         MODULE        ?C?COPY
   C:00F6H         PUBLIC        ?C?COPY
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 18
+
+
   -------         ENDMOD        ?C?COPY
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/27/2018  17:05:13  PAGE 18
-
-
 
   -------         MODULE        ?C?CLDOPTR
   C:011CH         PUBLIC        ?C?CLDOPTR
@@ -1031,5 +1032,5 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0149H         PUBLIC        ?C?MEMSET
   -------         ENDMOD        ?C?MEMSET
 
-Program Size: data=97.0 xdata=0 code=2596
+Program Size: data=97.0 xdata=0 code=2599
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
