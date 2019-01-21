@@ -1,10 +1,10 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        10/15/2018  14:10:32  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/21/2019  12:05:09  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-D:\KEIL_V514\C51\BIN\BL51.EXE ..\Output\main.obj, ..\Output\io.obj, ..\Output\relay.obj, ..\Output\rs485.obj, ..\Output\
->> crc8.obj, ..\Output\delay.obj, ..\Output\watchdog.obj TO ..\Output\Laite_Dimmer PRINT (..\Listing\Laite_Dimmer.m51) R
->> AMSIZE (256)
+D:\KEIL515\C51\BIN\BL51.EXE ..\Output\main.obj, ..\Output\io.obj, ..\Output\relay.obj, ..\Output\rs485.obj, ..\Output\cr
+>> c8.obj, ..\Output\delay.obj, ..\Output\watchdog.obj TO ..\Output\Laite_Dimmer PRINT (..\Listing\Laite_Dimmer.m51) RAM
+>> SIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -18,11 +18,11 @@ INPUT MODULES INCLUDED:
   ..\Output\crc8.obj (CRC8)
   ..\Output\delay.obj (DELAY)
   ..\Output\watchdog.obj (WATCHDOG)
-  D:\KEIL_V514\C51\LIB\C51S.LIB (?C_STARTUP)
-  D:\KEIL_V514\C51\LIB\C51S.LIB (?C?COPY)
-  D:\KEIL_V514\C51\LIB\C51S.LIB (?C?CLDOPTR)
-  D:\KEIL_V514\C51\LIB\C51S.LIB (?C?MEMSET)
-  D:\KEIL_V514\C51\LIB\C51S.LIB (?C_INIT)
+  D:\KEIL515\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL515\C51\LIB\C51S.LIB (?C?COPY)
+  D:\KEIL515\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  D:\KEIL515\C51\LIB\C51S.LIB (?C?MEMSET)
+  D:\KEIL515\C51\LIB\C51S.LIB (?C_INIT)
 
 
 LINK MAP OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
@@ -52,21 +52,21 @@ LINK MAP OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
             CODE    0175H     011BH     UNIT         ?PR?IO_STATE_CONVERT?IO
             CODE    0290H     00F6H     UNIT         ?PR?_IO_INPUT_CHECK?IO
             CODE    0386H     00B2H     UNIT         ?PR?UART1?RS485
-            CODE    0438H     00A9H     UNIT         ?PR?_ANALYSE_RECEIVED_DATA?RS485
-            CODE    04E1H     008CH     UNIT         ?C_C51STARTUP
-            CODE    056DH     0079H     UNIT         ?PR?_RESPONSE_IO_RELAY_STATE?RS485
-            CODE    05E6H     0071H     UNIT         ?PR?IO_INPUT_SCAN?IO
-            CODE    0657H     006FH     UNIT         ?PR?_RESPONSE_RS485_ADRRESS?RS485
-            CODE    06C6H     0067H     UNIT         ?PR?_RESPONSE_CMD_CONTROL_MSG?RS485
-            CODE    072DH     005BH     UNIT         ?PR?_RELAY_CONTROL?RELAY
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 2
+            CODE    0438H     00A1H     UNIT         ?PR?_ANALYSE_RECEIVED_DATA?RS485
+            CODE    04D9H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0565H     0079H     UNIT         ?PR?_RESPONSE_IO_RELAY_STATE?RS485
+            CODE    05DEH     0071H     UNIT         ?PR?IO_INPUT_SCAN?IO
+            CODE    064FH     006FH     UNIT         ?PR?_RESPONSE_RS485_ADRRESS?RS485
+            CODE    06BEH     0067H     UNIT         ?PR?_RESPONSE_CMD_CONTROL_MSG?RS485
+            CODE    0725H     005BH     UNIT         ?PR?_RELAY_CONTROL?RELAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 2
 
 
-            CODE    0788H     0052H     UNIT         ?PR?_CMD_CONTROL_RELAY?RELAY
-            CODE    07DAH     004CH     UNIT         ?C_INITSEG
-            CODE    0826H     004BH     UNIT         ?CO?RS485
-            CODE    0871H     0045H     UNIT         ?PR?RELAY_STATE_CONVER?RELAY
-            CODE    08B6H     0045H     UNIT         ?PR?_CRC8_CHECK?CRC8
+            CODE    0780H     0052H     UNIT         ?PR?_CMD_CONTROL_RELAY?RELAY
+            CODE    07D2H     004DH     UNIT         ?PR?_CRC8_CHECK?CRC8
+            CODE    081FH     004CH     UNIT         ?C_INITSEG
+            CODE    086BH     004BH     UNIT         ?CO?RS485
+            CODE    08B6H     0045H     UNIT         ?PR?RELAY_STATE_CONVER?RELAY
             CODE    08FBH     0038H     UNIT         ?PR?IO_RS485_ADDR_SCAN?IO
             CODE    0933H     0026H     UNIT         ?PR?_SEND_DATA?RS485
             CODE    0959H     0025H     UNIT         ?PR?_UART_CMD_CONTROL_RELAY?RS485
@@ -119,7 +119,7 @@ SEGMENT                                       DATA_GROUP
   +--> ?CO?RS485
   +--> ?PR?_CRC8_CHECK?CRC8
   +--> ?PR?_SEND_DATA?RS485
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 3
 
 
 
@@ -179,16 +179,16 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 4
 
 
   D:00C8H         PUBLIC        P5
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   C:09B6H         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
   C:09B6H         LINE#         9
@@ -218,7 +218,6 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:08FBH         PUBLIC        IO_RS485_Addr_Scan
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   D:0037H         PUBLIC        RS485_Addr
   C:099BH         PUBLIC        IO_Enable_Scan
   B:00C8H.5       PUBLIC        Addr1
@@ -239,10 +238,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   B:0090H.1       PUBLIC        IO4
   C:0294H         PUBLIC        _IO_Input_Check
   B:0080H.0       PUBLIC        IO5
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 5
-
-
   B:0080H.1       PUBLIC        IO6
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 5
+
+
   B:0080H.2       PUBLIC        IO7
   B:0080H.3       PUBLIC        IO8
   D:0043H         PUBLIC        Cnt1
@@ -254,7 +253,8 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   B:00A0H.2       PUBLIC        IO6_En
   B:00A0H.1       PUBLIC        IO7_En
   B:00A0H.0       PUBLIC        IO8_En
-  C:05E6H         PUBLIC        IO_Input_Scan
+  D:00C8H         PUBLIC        T2CON
+  C:05DEH         PUBLIC        IO_Input_Scan
   D:0044H         PUBLIC        IO_Input_Lock
   D:00D0H         PUBLIC        PSW
   -------         PROC          IO_RS485_ADDR_SCAN
@@ -286,41 +286,41 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:002DH         SYMBOL        Temp1
   D:002EH         SYMBOL        Temp2
   -------         ENDDO         
-  C:05E6H         LINE#         40
-  C:05E6H         LINE#         41
-  C:05E6H         LINE#         42
-  C:05EBH         LINE#         44
-  C:05EDH         LINE#         45
-  C:05EDH         LINE#         46
-  C:05F2H         LINE#         47
-  C:05F9H         LINE#         48
-  C:05FEH         LINE#         50
-  C:0604H         LINE#         51
-  C:0604H         LINE#         52
-  C:0608H         LINE#         53
-  C:0608H         LINE#         54
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 6
+  C:05DEH         LINE#         40
+  C:05DEH         LINE#         41
+  C:05DEH         LINE#         42
+  C:05E3H         LINE#         44
+  C:05E5H         LINE#         45
+  C:05E5H         LINE#         46
+  C:05EAH         LINE#         47
+  C:05F1H         LINE#         48
+  C:05F6H         LINE#         50
+  C:05FCH         LINE#         51
+  C:05FCH         LINE#         52
+  C:0600H         LINE#         53
+  C:0600H         LINE#         54
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 6
 
 
-  C:0612H         LINE#         55
-  C:0612H         LINE#         56
-  C:061AH         LINE#         57
-  C:061AH         LINE#         58
-  C:061FH         LINE#         59
-  C:0626H         LINE#         60
-  C:0626H         LINE#         61
-  C:0626H         LINE#         62
-  C:0630H         LINE#         63
-  C:0632H         LINE#         65
-  C:0632H         LINE#         66
-  C:0644H         LINE#         67
-  C:0644H         LINE#         68
-  C:0646H         LINE#         69
-  C:064DH         LINE#         70
-  C:064DH         LINE#         71
-  C:064DH         LINE#         72
-  C:064DH         LINE#         73
-  C:0656H         LINE#         74
+  C:060AH         LINE#         55
+  C:060AH         LINE#         56
+  C:0612H         LINE#         57
+  C:0612H         LINE#         58
+  C:0617H         LINE#         59
+  C:061EH         LINE#         60
+  C:061EH         LINE#         61
+  C:061EH         LINE#         62
+  C:0628H         LINE#         63
+  C:062AH         LINE#         65
+  C:062AH         LINE#         66
+  C:063CH         LINE#         67
+  C:063CH         LINE#         68
+  C:063EH         LINE#         69
+  C:0645H         LINE#         70
+  C:0645H         LINE#         71
+  C:0645H         LINE#         72
+  C:0645H         LINE#         73
+  C:064EH         LINE#         74
   -------         ENDPROC       IO_INPUT_SCAN
   -------         PROC          IO_STATE_CONVERT
   C:0175H         LINE#         78
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:02E3H         LINE#         120
   C:02E5H         LINE#         121
   C:02E8H         LINE#         122
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 7
 
 
   C:02E8H         LINE#         123
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:036BH         LINE#         177
   C:036BH         LINE#         178
   C:036DH         LINE#         179
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 8
 
 
   C:036FH         LINE#         180
@@ -449,16 +449,16 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00C8H         PUBLIC        P5
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   B:00B0H.4       PUBLIC        Relay1
   B:00B0H.5       PUBLIC        Relay2
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0871H         PUBLIC        Relay_State_Conver
-  C:0788H         PUBLIC        _Cmd_Control_Relay
+  C:08B6H         PUBLIC        Relay_State_Conver
+  C:0780H         PUBLIC        _Cmd_Control_Relay
   C:0A0FH         PUBLIC        _IO_Control_Relay
-  C:072DH         PUBLIC        _Relay_Control
+  C:0725H         PUBLIC        _Relay_Control
   D:0057H         PUBLIC        Relay_State
+  D:00C8H         PUBLIC        T2CON
   C:09FBH         PUBLIC        Relay_Init
   D:0058H         PUBLIC        Relay_Temp
   D:00D0H         PUBLIC        PSW
@@ -477,129 +477,129 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   -------         PROC          _RELAY_CONTROL
   D:0007H         SYMBOL        Num
   D:0005H         SYMBOL        Set
-  C:072DH         LINE#         18
-  C:072DH         LINE#         19
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 9
+  C:0725H         LINE#         18
+  C:0725H         LINE#         19
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 9
 
 
-  C:072DH         LINE#         20
-  C:0734H         LINE#         21
-  C:0734H         LINE#         22
-  C:0734H         LINE#         23
-  C:0740H         LINE#         24
-  C:0740H         LINE#         25
-  C:0740H         LINE#         26
-  C:0740H         LINE#         27
-  C:0740H         LINE#         28
-  C:0742H         LINE#         29
-  C:0742H         LINE#         30
-  C:0744H         LINE#         31
-  C:0744H         LINE#         32
-  C:0746H         LINE#         33
-  C:0746H         LINE#         34
-  C:0748H         LINE#         35
-  C:0748H         LINE#         36
-  C:074FH         LINE#         37
-  C:074FH         LINE#         38
-  C:0751H         LINE#         39
-  C:0753H         LINE#         40
-  C:0754H         LINE#         42
-  C:0754H         LINE#         43
-  C:0756H         LINE#         44
-  C:0758H         LINE#         45
-  C:0758H         LINE#         46
-  C:0759H         LINE#         48
-  C:0759H         LINE#         49
-  C:0759H         LINE#         50
-  C:0759H         LINE#         51
-  C:0759H         LINE#         52
-  C:0759H         LINE#         53
-  C:0765H         LINE#         54
-  C:0765H         LINE#         55
-  C:0765H         LINE#         56
-  C:0765H         LINE#         57
-  C:0765H         LINE#         58
-  C:0767H         LINE#         59
-  C:076DH         LINE#         60
-  C:076EH         LINE#         61
-  C:076EH         LINE#         62
-  C:0770H         LINE#         63
-  C:0776H         LINE#         64
-  C:0777H         LINE#         65
-  C:0777H         LINE#         66
-  C:077EH         LINE#         67
-  C:077EH         LINE#         68
-  C:0780H         LINE#         69
-  C:0782H         LINE#         70
-  C:0783H         LINE#         72
-  C:0783H         LINE#         73
-  C:0785H         LINE#         74
-  C:0787H         LINE#         75
-  C:0787H         LINE#         76
-  C:0787H         LINE#         78
-  C:0787H         LINE#         79
-  C:0787H         LINE#         80
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 10
+  C:0725H         LINE#         20
+  C:072CH         LINE#         21
+  C:072CH         LINE#         22
+  C:072CH         LINE#         23
+  C:0738H         LINE#         24
+  C:0738H         LINE#         25
+  C:0738H         LINE#         26
+  C:0738H         LINE#         27
+  C:0738H         LINE#         28
+  C:073AH         LINE#         29
+  C:073AH         LINE#         30
+  C:073CH         LINE#         31
+  C:073CH         LINE#         32
+  C:073EH         LINE#         33
+  C:073EH         LINE#         34
+  C:0740H         LINE#         35
+  C:0740H         LINE#         36
+  C:0747H         LINE#         37
+  C:0747H         LINE#         38
+  C:0749H         LINE#         39
+  C:074BH         LINE#         40
+  C:074CH         LINE#         42
+  C:074CH         LINE#         43
+  C:074EH         LINE#         44
+  C:0750H         LINE#         45
+  C:0750H         LINE#         46
+  C:0751H         LINE#         48
+  C:0751H         LINE#         49
+  C:0751H         LINE#         50
+  C:0751H         LINE#         51
+  C:0751H         LINE#         52
+  C:0751H         LINE#         53
+  C:075DH         LINE#         54
+  C:075DH         LINE#         55
+  C:075DH         LINE#         56
+  C:075DH         LINE#         57
+  C:075DH         LINE#         58
+  C:075FH         LINE#         59
+  C:0765H         LINE#         60
+  C:0766H         LINE#         61
+  C:0766H         LINE#         62
+  C:0768H         LINE#         63
+  C:076EH         LINE#         64
+  C:076FH         LINE#         65
+  C:076FH         LINE#         66
+  C:0776H         LINE#         67
+  C:0776H         LINE#         68
+  C:0778H         LINE#         69
+  C:077AH         LINE#         70
+  C:077BH         LINE#         72
+  C:077BH         LINE#         73
+  C:077DH         LINE#         74
+  C:077FH         LINE#         75
+  C:077FH         LINE#         76
+  C:077FH         LINE#         78
+  C:077FH         LINE#         79
+  C:077FH         LINE#         80
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 10
 
 
-  C:0787H         LINE#         81
-  C:0787H         LINE#         83
-  C:0787H         LINE#         84
-  C:0787H         LINE#         85
-  C:0787H         LINE#         86
+  C:077FH         LINE#         81
+  C:077FH         LINE#         83
+  C:077FH         LINE#         84
+  C:077FH         LINE#         85
+  C:077FH         LINE#         86
   -------         ENDPROC       _RELAY_CONTROL
   -------         PROC          _CMD_CONTROL_RELAY
   D:0001H         SYMBOL        Cmd
-  C:0788H         LINE#         90
-  C:0788H         LINE#         91
-  C:0788H         LINE#         92
-  C:0795H         LINE#         93
-  C:0795H         LINE#         94
-  C:0795H         LINE#         95
-  C:07A6H         LINE#         96
-  C:07A6H         LINE#         97
-  C:07A6H         LINE#         98
-  C:07A6H         LINE#         99
-  C:07A6H         LINE#         100
-  C:07A8H         LINE#         101
-  C:07AAH         LINE#         102
-  C:07AAH         LINE#         103
-  C:07ADH         LINE#         104
-  C:07AFH         LINE#         105
-  C:07AFH         LINE#         106
-  C:07B3H         LINE#         107
-  C:07B5H         LINE#         109
-  C:07B5H         LINE#         110
-  C:07B5H         LINE#         111
-  C:07B5H         LINE#         112
-  C:07B5H         LINE#         114
-  C:07B5H         LINE#         115
-  C:07C6H         LINE#         116
-  C:07C6H         LINE#         117
-  C:07C6H         LINE#         118
-  C:07C6H         LINE#         119
-  C:07C6H         LINE#         120
-  C:07CAH         LINE#         121
-  C:07CCH         LINE#         122
-  C:07CCH         LINE#         123
-  C:07D0H         LINE#         124
-  C:07D2H         LINE#         125
-  C:07D2H         LINE#         126
-  C:07D9H         LINE#         127
-  C:07D9H         LINE#         129
-  C:07D9H         LINE#         130
-  C:07D9H         LINE#         131
-  C:07D9H         LINE#         132
-  C:07D9H         LINE#         134
-  C:07D9H         LINE#         135
-  C:07D9H         LINE#         136
-  C:07D9H         LINE#         137
+  C:0780H         LINE#         90
+  C:0780H         LINE#         91
+  C:0780H         LINE#         92
+  C:078DH         LINE#         93
+  C:078DH         LINE#         94
+  C:078DH         LINE#         95
+  C:079EH         LINE#         96
+  C:079EH         LINE#         97
+  C:079EH         LINE#         98
+  C:079EH         LINE#         99
+  C:079EH         LINE#         100
+  C:07A0H         LINE#         101
+  C:07A2H         LINE#         102
+  C:07A2H         LINE#         103
+  C:07A5H         LINE#         104
+  C:07A7H         LINE#         105
+  C:07A7H         LINE#         106
+  C:07ABH         LINE#         107
+  C:07ADH         LINE#         109
+  C:07ADH         LINE#         110
+  C:07ADH         LINE#         111
+  C:07ADH         LINE#         112
+  C:07ADH         LINE#         114
+  C:07ADH         LINE#         115
+  C:07BEH         LINE#         116
+  C:07BEH         LINE#         117
+  C:07BEH         LINE#         118
+  C:07BEH         LINE#         119
+  C:07BEH         LINE#         120
+  C:07C2H         LINE#         121
+  C:07C4H         LINE#         122
+  C:07C4H         LINE#         123
+  C:07C8H         LINE#         124
+  C:07CAH         LINE#         125
+  C:07CAH         LINE#         126
+  C:07D1H         LINE#         127
+  C:07D1H         LINE#         129
+  C:07D1H         LINE#         130
+  C:07D1H         LINE#         131
+  C:07D1H         LINE#         132
+  C:07D1H         LINE#         134
+  C:07D1H         LINE#         135
+  C:07D1H         LINE#         136
+  C:07D1H         LINE#         137
   -------         ENDPROC       _CMD_CONTROL_RELAY
   -------         PROC          _IO_CONTROL_RELAY
   D:0007H         SYMBOL        Num
   C:0A0FH         LINE#         139
   C:0A0FH         LINE#         140
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 11
 
 
   C:0A0FH         LINE#         141
@@ -609,10 +609,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0A1AH         LINE#         145
   -------         ENDPROC       _IO_CONTROL_RELAY
   -------         PROC          RELAY_STATE_CONVER
-  C:0871H         LINE#         147
-  C:0871H         LINE#         148
-  C:0871H         LINE#         149
-  C:08B5H         LINE#         153
+  C:08B6H         LINE#         147
+  C:08B6H         LINE#         148
+  C:08B6H         LINE#         149
+  C:08FAH         LINE#         153
   -------         ENDPROC       RELAY_STATE_CONVER
   -------         ENDMOD        RELAY
 
@@ -627,30 +627,30 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:004CH         PUBLIC        Rx_Buffer
   C:0933H         PUBLIC        _Send_data
   D:00A8H         PUBLIC        IE
-  C:056DH         PUBLIC        _Response_IO_Relay_State
+  C:0565H         PUBLIC        _Response_IO_Relay_State
   B:00A8H.4       PUBLIC        ES
   D:00B8H         PUBLIC        IP
-  C:06C6H         PUBLIC        _Response_Cmd_Control_Msg
+  C:06BEH         PUBLIC        _Response_Cmd_Control_Msg
   B:0098H.0       PUBLIC        RI
   B:0098H.1       PUBLIC        TI
-  D:00D8H         PUBLIC        CCON
   D:0099H         PUBLIC        SBUF
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0657H         PUBLIC        _Response_RS485_Adrress
+  C:064FH         PUBLIC        _Response_RS485_Adrress
   C:097EH         PUBLIC        RS485_Init
   D:008EH         PUBLIC        AUXR
-  C:0826H         SYMBOL        _?ix1000
-  C:0835H         SYMBOL        _?ix1001
-  C:083FH         SYMBOL        _?ix1002
-  C:084EH         SYMBOL        _?ix1003
-  C:0858H         SYMBOL        _?ix1004
-  C:0867H         SYMBOL        _?ix1005
+  C:086BH         SYMBOL        _?ix1000
+  C:087AH         SYMBOL        _?ix1001
+  C:0884H         SYMBOL        _?ix1002
+  C:0893H         SYMBOL        _?ix1003
+  C:089DH         SYMBOL        _?ix1004
+  C:08ACH         SYMBOL        _?ix1005
   D:00D6H         PUBLIC        T2H
   D:0056H         PUBLIC        Rx_Cnt
   D:00D7H         PUBLIC        T2L
   C:0959H         PUBLIC        _UART_Cmd_Control_Relay
   C:0438H         PUBLIC        _Analyse_Received_data
+  D:00C8H         PUBLIC        T2CON
   C:0386H         PUBLIC        UART1
   D:00A2H         PUBLIC        AUXR1
   D:00D0H         PUBLIC        PSW
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:097EH         LINE#         18
   C:097EH         LINE#         19
   C:0981H         LINE#         21
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 12
 
 
   C:0984H         LINE#         23
@@ -719,7 +719,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0940H         LINE#         95
   C:0940H         LINE#         96
   C:0950H         LINE#         97
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 13
 
 
   C:0953H         LINE#         98
@@ -731,31 +731,31 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:000BH         SYMBOL        Analy_Cnt
   C:0438H         LINE#         108
   C:0440H         LINE#         109
-  C:0440H         LINE#         111
-  C:0468H         LINE#         115
-  C:0472H         LINE#         116
-  C:0472H         LINE#         117
-  C:0480H         LINE#         118
-  C:0480H         LINE#         119
-  C:0480H         LINE#         120
-  C:0486H         LINE#         121
-  C:0489H         LINE#         122
-  C:048CH         LINE#         123
-  C:049CH         LINE#         124
-  C:04ABH         LINE#         125
-  C:04BAH         LINE#         126
-  C:04BAH         LINE#         127
-  C:04BAH         LINE#         128
-  C:04C3H         LINE#         129
-  C:04C3H         LINE#         131
-  C:04C3H         LINE#         132
-  C:04C3H         LINE#         133
-  C:04C3H         LINE#         134
-  C:04C3H         LINE#         135
-  C:04DDH         LINE#         136
-  C:04DDH         LINE#         137
-  C:04E0H         LINE#         138
-  C:04E0H         LINE#         139
+  C:0440H         LINE#         114
+  C:0460H         LINE#         117
+  C:046AH         LINE#         118
+  C:046AH         LINE#         119
+  C:0478H         LINE#         120
+  C:0478H         LINE#         121
+  C:0478H         LINE#         122
+  C:047EH         LINE#         123
+  C:0481H         LINE#         124
+  C:0484H         LINE#         125
+  C:0494H         LINE#         126
+  C:04A3H         LINE#         127
+  C:04B2H         LINE#         128
+  C:04B2H         LINE#         129
+  C:04B2H         LINE#         130
+  C:04BBH         LINE#         131
+  C:04BBH         LINE#         133
+  C:04BBH         LINE#         134
+  C:04BBH         LINE#         135
+  C:04BBH         LINE#         136
+  C:04BBH         LINE#         137
+  C:04D5H         LINE#         138
+  C:04D5H         LINE#         139
+  C:04D8H         LINE#         140
+  C:04D8H         LINE#         141
   -------         ENDPROC       _ANALYSE_RECEIVED_DATA
   -------         PROC          _RESPONSE_RS485_ADRRESS
   D:000CH         SYMBOL        addr
@@ -764,41 +764,41 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:000EH         SYMBOL        Send_Temp
   D:001DH         SYMBOL        CRC_Temp
   -------         ENDDO         
-  C:0657H         LINE#         149
-  C:065BH         LINE#         150
-  C:065BH         LINE#         151
-  C:066EH         LINE#         152
-  C:0681H         LINE#         153
-  C:0684H         LINE#         154
-  C:0687H         LINE#         156
-  C:068AH         LINE#         157
-  C:068DH         LINE#         159
-  C:0690H         LINE#         160
-  C:0693H         LINE#         162
-  C:0696H         LINE#         163
-  C:0699H         LINE#         165
-  C:069CH         LINE#         166
-  C:069FH         LINE#         168
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 14
+  C:064FH         LINE#         151
+  C:0653H         LINE#         152
+  C:0653H         LINE#         153
+  C:0666H         LINE#         154
+  C:0679H         LINE#         156
+  C:067CH         LINE#         157
+  C:067FH         LINE#         159
+  C:0682H         LINE#         160
+  C:0685H         LINE#         162
+  C:0688H         LINE#         163
+  C:068BH         LINE#         165
+  C:068EH         LINE#         166
+  C:0691H         LINE#         168
+  C:0694H         LINE#         169
+  C:0697H         LINE#         171
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 14
 
 
-  C:06A2H         LINE#         169
-  C:06A5H         LINE#         171
-  C:06A8H         LINE#         172
-  C:06ABH         LINE#         174
-  C:06AEH         LINE#         176
-  C:06BBH         LINE#         178
+  C:069AH         LINE#         172
+  C:069DH         LINE#         174
+  C:06A0H         LINE#         175
+  C:06A3H         LINE#         177
+  C:06A6H         LINE#         179
+  C:06B3H         LINE#         181
   -------         ENDPROC       _RESPONSE_RS485_ADRRESS
   -------         PROC          _UART_CMD_CONTROL_RELAY
   D:000CH         SYMBOL        Cmd_Temp
-  C:0959H         LINE#         187
-  C:095FH         LINE#         188
-  C:095FH         LINE#         189
-  C:096AH         LINE#         190
-  C:096AH         LINE#         191
-  C:096DH         LINE#         192
-  C:097DH         LINE#         193
-  C:097DH         LINE#         194
+  C:0959H         LINE#         190
+  C:095FH         LINE#         191
+  C:095FH         LINE#         192
+  C:096AH         LINE#         193
+  C:096AH         LINE#         194
+  C:096DH         LINE#         195
+  C:097DH         LINE#         196
+  C:097DH         LINE#         197
   -------         ENDPROC       _UART_CMD_CONTROL_RELAY
   -------         PROC          _RESPONSE_CMD_CONTROL_MSG
   D:000FH         SYMBOL        cmd
@@ -806,25 +806,25 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0010H         SYMBOL        Send_Temp
   D:001FH         SYMBOL        CRC_Temp
   -------         ENDDO         
-  C:06C6H         LINE#         203
-  C:06C8H         LINE#         204
-  C:06C8H         LINE#         205
-  C:06DBH         LINE#         206
-  C:06EEH         LINE#         207
-  C:06F1H         LINE#         208
-  C:06F4H         LINE#         210
-  C:06F7H         LINE#         211
-  C:06FAH         LINE#         213
-  C:06FDH         LINE#         214
-  C:0700H         LINE#         216
-  C:0703H         LINE#         217
-  C:0706H         LINE#         219
-  C:0709H         LINE#         220
-  C:070CH         LINE#         222
-  C:070FH         LINE#         223
-  C:0712H         LINE#         225
-  C:0715H         LINE#         227
-  C:0722H         LINE#         229
+  C:06BEH         LINE#         206
+  C:06C0H         LINE#         207
+  C:06C0H         LINE#         208
+  C:06D3H         LINE#         209
+  C:06E6H         LINE#         210
+  C:06E9H         LINE#         211
+  C:06ECH         LINE#         213
+  C:06EFH         LINE#         214
+  C:06F2H         LINE#         216
+  C:06F5H         LINE#         217
+  C:06F8H         LINE#         219
+  C:06FBH         LINE#         220
+  C:06FEH         LINE#         222
+  C:0701H         LINE#         223
+  C:0704H         LINE#         225
+  C:0707H         LINE#         226
+  C:070AH         LINE#         228
+  C:070DH         LINE#         230
+  C:071AH         LINE#         232
   -------         ENDPROC       _RESPONSE_CMD_CONTROL_MSG
   -------         PROC          _RESPONSE_IO_RELAY_STATE
   D:000CH         SYMBOL        cmd
@@ -832,34 +832,34 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:000DH         SYMBOL        Send_Temp
   D:001CH         SYMBOL        CRC_Temp
   -------         ENDDO         
-  C:056DH         LINE#         238
-  C:056FH         LINE#         239
-  C:056FH         LINE#         240
-  C:0582H         LINE#         241
-  C:0595H         LINE#         242
-  C:0598H         LINE#         243
-  C:059BH         LINE#         245
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 15
+  C:0565H         LINE#         241
+  C:0567H         LINE#         242
+  C:0567H         LINE#         243
+  C:057AH         LINE#         244
+  C:058DH         LINE#         245
+  C:0590H         LINE#         246
+  C:0593H         LINE#         248
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 15
 
 
-  C:059EH         LINE#         246
-  C:05A1H         LINE#         248
-  C:05A4H         LINE#         249
-  C:05A7H         LINE#         251
-  C:05AAH         LINE#         252
-  C:05ADH         LINE#         254
-  C:05B0H         LINE#         255
-  C:05B3H         LINE#         257
-  C:05B6H         LINE#         258
-  C:05B9H         LINE#         260
-  C:05BCH         LINE#         261
-  C:05BFH         LINE#         263
-  C:05C2H         LINE#         264
-  C:05C5H         LINE#         266
-  C:05C8H         LINE#         267
-  C:05CBH         LINE#         269
-  C:05CEH         LINE#         271
-  C:05DBH         LINE#         273
+  C:0596H         LINE#         249
+  C:0599H         LINE#         251
+  C:059CH         LINE#         252
+  C:059FH         LINE#         254
+  C:05A2H         LINE#         255
+  C:05A5H         LINE#         257
+  C:05A8H         LINE#         258
+  C:05ABH         LINE#         260
+  C:05AEH         LINE#         261
+  C:05B1H         LINE#         263
+  C:05B4H         LINE#         264
+  C:05B7H         LINE#         266
+  C:05BAH         LINE#         267
+  C:05BDH         LINE#         269
+  C:05C0H         LINE#         270
+  C:05C3H         LINE#         272
+  C:05C6H         LINE#         274
+  C:05D3H         LINE#         276
   -------         ENDPROC       _RESPONSE_IO_RELAY_STATE
   -------         ENDMOD        RS485
 
@@ -872,10 +872,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:00C8H         PUBLIC        P5
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:08B6H         PUBLIC        _CRC8_Check
+  C:07D2H         PUBLIC        _CRC8_Check
+  D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          _CRC8_CHECK
   D:0029H         SYMBOL        len
@@ -886,29 +886,31 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:0005H         SYMBOL        crc
   D:0004H         SYMBOL        middle_byte
   -------         ENDDO         
-  C:08B6H         LINE#         10
-  C:08BEH         LINE#         11
-  C:08BEH         LINE#         12
-  C:08C1H         LINE#         13
-  C:08C7H         LINE#         14
-  C:08C7H         LINE#         15
-  C:08D6H         LINE#         16
-  C:08D8H         LINE#         17
-  C:08DDH         LINE#         18
-  C:08E1H         LINE#         19
-  C:08E3H         LINE#         20
-  C:08E3H         LINE#         21
-  C:08E6H         LINE#         22
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 16
+  C:07D2H         LINE#         31
+  C:07DAH         LINE#         32
+  C:07DAH         LINE#         33
+  C:07DDH         LINE#         34
+  C:07E7H         LINE#         35
+  C:07E7H         LINE#         36
+  C:07FAH         LINE#         37
+  C:07FCH         LINE#         38
+  C:07FCH         LINE#         39
+  C:0801H         LINE#         40
+  C:0801H         LINE#         41
+  C:0805H         LINE#         42
+  C:0807H         LINE#         44
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 16
 
 
-  C:08EAH         LINE#         23
-  C:08EDH         LINE#         24
-  C:08EDH         LINE#         25
-  C:08F1H         LINE#         26
-  C:08F5H         LINE#         27
-  C:08F8H         LINE#         28
-  C:08FAH         LINE#         29
+  C:0807H         LINE#         45
+  C:080AH         LINE#         46
+  C:080EH         LINE#         47
+  C:0811H         LINE#         48
+  C:0811H         LINE#         49
+  C:0815H         LINE#         50
+  C:0819H         LINE#         51
+  C:081CH         LINE#         52
+  C:081EH         LINE#         53
   -------         ENDPROC       _CRC8_CHECK
   -------         ENDMOD        CRC8
 
@@ -923,7 +925,6 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:005CH         PUBLIC        Device_Online_Count
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   C:09E6H         PUBLIC        Timer1_Init
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
@@ -938,6 +939,7 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   D:005EH         PUBLIC        Timing_Count
   C:0003H         PUBLIC        Device_State_Jugement
   C:09D0H         PUBLIC        TM1_Isr
+  D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          TIMER1_INIT
   C:09E6H         LINE#         8
@@ -957,11 +959,11 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:0003H         LINE#         22
   C:0003H         LINE#         23
   C:0009H         LINE#         24
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 17
+
+
   C:0009H         LINE#         25
   C:000CH         LINE#         26
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 17
-
-
   C:0014H         LINE#         27
   C:0015H         LINE#         29
   C:0015H         LINE#         30
@@ -997,10 +999,10 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   C:001EH         PUBLIC        WatchDog_Init
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00C1H         PUBLIC        WDT_CONTR
+  D:00C8H         PUBLIC        T2CON
   C:0A26H         PUBLIC        WatchDog_Feed
   D:00D0H         PUBLIC        PSW
   -------         PROC          WATCHDOG_INIT
@@ -1017,11 +1019,11 @@ SYMBOL TABLE OF MODULE:  ..\Output\Laite_Dimmer (MAIN)
   -------         ENDPROC       WATCHDOG_FEED
   -------         ENDMOD        WATCHDOG
 
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/21/2019  12:05:09  PAGE 18
+
+
   -------         MODULE        ?C?COPY
   C:00F6H         PUBLIC        ?C?COPY
-BL51 BANKED LINKER/LOCATER V6.22                                                      10/15/2018  14:10:32  PAGE 18
-
-
   -------         ENDMOD        ?C?COPY
 
   -------         MODULE        ?C?CLDOPTR

@@ -107,10 +107,12 @@ void Send_data(uint8_t *Send_Buffer,uint8_t Send_Cnt)
 ******************************************************************************/
 void  Analyse_Received_data(uint8_t *Analy_Buffer,uint8_t Analy_Cnt)
 {
-  /*对收到的数据中附加的CRC码和本地根据收到的数据包算出的CRC码进行校验对比*/
-	if(CRC8_Check(Analy_Cnt-1-3,Analy_Buffer+3) != Analy_Buffer[Analy_Cnt-1])
-		return ;
+//  /*对收到的数据中附加的CRC码和本地根据收到的数据包算出的CRC码进行校验对比*/
+//	if(CRC8_Check(Analy_Cnt-1-3,Analy_Buffer+3) != Analy_Buffer[Analy_Cnt-1])
+//		return ;
 	
+	if(CRC8_Check(Analy_Cnt-1,Analy_Buffer) != Analy_Buffer[Analy_Cnt-1])
+		 return ;
   /*开始根据RS485传输的指令进行比对和处理*/	 
 	if(Analy_Buffer[3] == RS485_Addr)
 	{							
@@ -150,6 +152,7 @@ void Response_RS485_Adrress(uint8_t addr,uint8_t cmd)
 {
   uint8_t Send_Temp[15]={0};
   uint8_t CRC_Temp[10]={0};
+	
   Send_Temp[0]=0xad;
   CRC_Temp[0]=Send_Temp[0];
   
